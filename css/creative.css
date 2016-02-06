@@ -57,11 +57,14 @@ p {
 
 .bg-dark {
     color: #fff;
-    background-color: #222;
+    background-color: #000;
 }
 
 .text-faded {
-    color: rgba(255,255,255,.7);
+    color: rgba(255,255,255,.6);
+}
+.text-faded-black {
+    color: rgba(0,0,0,.6);
 }
 
 section {
@@ -477,7 +480,51 @@ body {
     webkit-tap-highlight-color: #222;
 }
 
+/* Custom stuff */
+.text-sm {
+    font-size: 10pt;
+}
+.text-lightblue {
+    color: #5099d8;
+}
+.text-darkblue {
+    color: #28679c;
+}
 .icon-padding {
     margin-top: 90px;
 }
+.col-centered{
+    float: none;
+    margin: 0 auto;
+    padding-bottom: 0px;
+}
+.form-group label {
+    padding-bottom: 2px;
+}
+.form-horizontal .form-group .col-md-1 {
+    padding-right: 5px;
+    padding-left: 5px;
+}
+.form-horizontal .form-group .col-md-2 {
+    padding-right: 5px;
+    padding-left: 5px;
+}
+.form-horizontal .form-group .col-md-3 {
+    padding-right: 5px;
+    padding-left: 5px;
+}
+.form-horizontal .form-group .col-md-4 {
+    padding-right: 5px;
+    padding-left: 5px;
+}
+.form-horizontal .form-group .col-md-5 {
+    padding-right: 5px;
+    padding-left: 5px;
+}
+.form-horizontal .form-group .col-md-8 {
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+
 

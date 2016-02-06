@@ -18,6 +18,7 @@
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome-animation.min.css">
 
     <!-- Plugin CSS -->
     <link rel="stylesheet" href="css/animate.min.css" type="text/css">
@@ -60,7 +61,7 @@
                         <a class="page-scroll" href="#about">About</a>
                     </li>
                     <li>
-                        <a class="page-scroll">Sign Up</a>
+                        <a class="page-scroll" href="signup.html">Sign Up</a>
                     </li>
                 </ul>
             </div>
@@ -78,7 +79,7 @@
                 <h1>Borrow books</h1>
                 <br>
                 <p>By Students &nbsp;&nbsp;&nbsp; For Students</p>
-                <a href="#about" class="btn btn-primary btn-xl page-scroll wow bounce">Find Out More</a>
+                <a href="#about" class="btn btn-primary btn-xl page-scroll faa-bounce animated">Find Out More</a>
             </div>
         </div>
     </header>
@@ -86,7 +87,7 @@
     <section class="bg-primary" id="about">
         <div class="container">
             <div class="row">
-                <div class="col-lg-6 col-lg-offset-3 text-center">
+                <div class="col-lg-6 col-md-6 col-centered text-center">
                     <h2 class="section-heading">BookHook</h2>
                     <hr class="light">
                     <p>Tired of spending hundreds for books that you only read once?  BookHook is here to help.  We exist to help people get the books they want for cheap.
@@ -95,7 +96,7 @@
 						<br><br>  We are here to fix you up with the books you need for the prices you love.  Sign up free and get started in minutes!
 					</p>
                     <p></p>
-                    <a href="#" class="btn btn-default btn-xl wow tada">Sign Up Now</a>
+                    <a href="signup.html" class="btn btn-default btn-xl wow tada">Sign Up Now</a>
                 </div>
             </div>
         </div>
@@ -112,67 +113,77 @@
         </div>
         <div class="container">
             <div class="row">
-                <div class="col-lg-4 col-md-4 text-center">
+                <div class="col-lg-4 col-md-4 col-sm-4 text-center">
                     <div class="service-box">
                         <i class="fa fa-4x wow bounceIn text-primary"><img src="img/BookHookLogo.png" height="50"></i>
                         <h3>Exchange Books.</h3>
                         <p class="text-muted">Borrow books from other users, or lend old books you no longer use</p>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-4 text-center">
+                <div class="col-lg-4 col-md-4 col-sm-4 text-center">
                     <div class="service-box">
                         <i class="fa fa-4x fa-search wow bounceIn text-primary" data-wow-delay=".1s"></i>
                         <h3>Find People.</h3>
                         <p class="text-muted">Find other users nearby who are borrowing or lending.</p>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-4 text-center">
+                <div class="col-lg-4 col-md-4 col-sm-4 text-center">
                     <div class="service-box">
                         <i class="fa fa-4x fa-usd wow bounceIn text-primary" data-wow-delay=".2s"></i>
                         <h3>Save Money. Make Money.</h3>
                         <p class="text-muted">Borrow books instead of buying them full price. Loan old books and get paid.</p>
                     </div>
                 </div>
-                <!--div class="col-lg-3 col-md-6 text-center">
-                    <div class="service-box">
-                        <i class="fa fa-4x fa-heart wow bounceIn text-primary" data-wow-delay=".3s"></i>
-                        <h3>Made with Love</h3>
-                        <p class="text-muted">You have to make your websites with love these days!</p>
-                    </div>
-                </div-->
             </div>
         </div>
     </section>
 
-    <aside class="bg-dark">
-        <div class="container text-center">
-            <div class="call-to-action text-center">
-                <!--h2>Free Download at Start Bootstrap!</h2-->
-                <!--a href="#" class="btn btn-default btn-xl wow tada">Download Now!</a-->
-                <p>Copyright BookHook &copy; 2016</p>
-            </div>
-        </div>
-    </aside>
-
-    <!--section id="contact">
+    <!--section id="services">
         <div class="container">
             <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <h2 class="section-heading">Let's Get In Touch!</h2>
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Why you should join BookHook</h2>
                     <hr class="primary">
-                    <p>Ready to start your next project with us? That's great! Give us a call or send us an email and we will get back to you as soon as possible!</p>
                 </div>
-                <div class="col-lg-4 col-lg-offset-2 text-center">
-                    <i class="fa fa-phone fa-3x wow bounceIn"></i>
-                    <p>123-456-6789</p>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-6 text-center">
+                    <div class="service-box">
+                        <i class="fa fa-4x wow bounceIn text-primary"><img src="img/BookHookLogo.png" height="50"></i>
+                        <h3>Exchange Books.</h3>
+                        <p><span class="text-lightblue">Tired of spending hundreds for books that you only read once?</span> <br>
+                        BookHook is here to help.  We exist to help people get the books they want for cheap.
+                        Users can loan or borrow books from other nearby users at low prices! 
+                        </p>
+                    </div>
                 </div>
-                <div class="col-lg-4 text-center">
-                    <i class="fa fa-envelope-o fa-3x wow bounceIn" data-wow-delay=".1s"></i>
-                    <p><a href="mailto:your-email@your-domain.com">feedback@startbootstrap.com</a></p>
+                <div class="col-lg-6 col-md-6 col-sm-6 text-center">
+                    <div class="service-box">
+                        <i class="fa fa-4x fa-search wow bounceIn text-primary" data-wow-delay=".1s"></i>
+                        <h3>Find People.</h3>
+                        <p class="text-muted">Find other users nearby who are borrowing or lending.</p>
+                    </div>
+                </div>
+            </div>
+                <div class="col-lg-4 col-md-4 col-sm-4 text-center">
+                    <div class="service-box">
+                        <i class="fa fa-4x fa-usd wow bounceIn text-primary" data-wow-delay=".2s"></i>
+                        <h3>Save Money. Make Money.</h3>
+                        <p class="text-muted">Borrow books instead of buying them full price. Loan old books and get paid.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section-->
+
+    <div class="navbar navbar-bottom">
+            <div class="text-center">
+                <p class="text-sm text-faded-black">Copyright &copy; BookHook 2016</p>
+            </div>
+        </div>
+    </div>
 
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
