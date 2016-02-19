@@ -88,7 +88,7 @@
             <div class="row">
                 <div class="col-md-8 col-sm-6 col-xs-6 col-centered">
 
-                    <form class="form-horizontal" action="userSignUp.php">
+                    <form class="form-horizontal" action="userSignUp.php" method="post">
                         <div class="form-group">
                             <label class="col-md-2 control-label"></label>  
                             <div class="col-md-4">
@@ -222,6 +222,62 @@
 
     <!-- Custom Theme JavaScript -->
     <script src="js/creative.js"></script>
+
+    <!-- Our Script -->
+    <script>
+    // FORM VALIDATION
+
+    // Tutorial used: 
+    // https://formden.com/blog/validate-contact-form-jquery
+
+    // Use this to only run code inside when page has loaded
+    $(document).ready(function() {
+        // FIRSTNAME can't be blank
+        $('#firstname').on('input', function() {
+            var input = $(this);
+            var is_name = input.val();
+            if(is_name) {
+                $(this.parentNode).removeClass("has-error");
+            }
+            else {
+                $(this.parentNode).addClass("has-error");
+            }
+        });
+        $('#firstname').on('focusout', function() {
+            var input = $(this);
+            var is_name = input.val();
+            if(is_name) {
+                $(this.parentNode).removeClass("has-error");
+            }
+            else {
+                $(this.parentNode).addClass("has-error");
+            }
+        });
+
+        // LASTNAME can't be blank
+        $('#lastname').on('input', function() {
+            var input = $(this);
+            var is_name = input.val();
+            if(is_name) {
+                $(this.parentNode).removeClass("has-error");
+            }
+            else {
+                $(this.parentNode).addClass("has-error");
+            }
+        });
+        $('#lastname').on('focusout', function() {
+            var input = $(this);
+            var is_name = input.val();
+            if(is_name) {
+                $(this.parentNode).removeClass("has-error");
+            }
+            else {
+                $(this.parentNode).addClass("has-error");
+            }
+        });
+
+    });
+    </script>
 
 </body>
 
