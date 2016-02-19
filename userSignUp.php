@@ -24,8 +24,8 @@
 	$zip	   = $_POST["zip"];
 	$email     = $_POST["email"];
 
-	echo "WOW";
-	echo $firstname, $lastname, $email, $street, $city, $state, $zip;
+	//echo "WOW";
+	//echo $firstname, $lastname, $email, $street, $city, $state, $zip;
 
 	$query = "INSERT INTO siteusers VALUES ('','$firstname', '$lastname', '$street', '$city', '$state', '$zip', '$email')";
 	mysql_query($query);
