@@ -192,7 +192,7 @@
                         <br>
                         <div class="form-group">
                         <label class="col-md-5 control-label"></label>
-                        <button class="col-md-2 btn btn-lg btn-primary faa-tada animated-hover">Sign Up</button>
+                        <button class="col-md-2 btn btn-lg btn-primary faa-tada animated-hover" id="btn_submit">Sign Up</button>
                         </div>
 
                     </form>
@@ -232,11 +232,57 @@
 
     // Use this to only run code inside when page has loaded
     $(document).ready(function() {
-        // FIRSTNAME can't be blank
+        var name_text   = /^[A-Za-z\-\.\'\s]{1,50}$/;
+        var email_text  = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,6}$/i;
+        var street_text = /^[0-9a-zA-Z#\-\.\'\,\s]{1,100}$/;
+        var zip_text    = /^[0-9]{1,5}$/;
+
+        // FORM SUBMISSION
+        $("form").submit(function (e) {
+            var firstname = document.getElementById("firstname").value;
+            var lastname  = document.getElementById("lastname").value;
+            var email     = document.getElementById("email").value;
+            var street    = document.getElementById("street").value;
+            var city      = document.getElementById("city").value;
+            var state     = document.getElementById("state").value;
+            var zip       = document.getElementById("zip").value;
+
+            if (!name_text.test(firstname)) {
+                alert("First name is invalid!");
+                return false;
+            }
+            else if (!name_text.test(lastname)) {
+                alert("Last name is invalid!");
+                return false;
+            }
+            else if (!email_text.test(email)) {
+                alert("Email is invalid!");
+                return false;
+            }
+            else if (!street_text.test(street)) {
+                alert("Street Address is invalid!");
+                return false;
+            }
+            else if (!name_text.test(city)) {
+                alert("City is invalid!");
+                return false;
+            }
+            else if (state == "--") {
+                alert("Please select a state!");
+                return false;
+            }
+            else if (!zip_text.test(zip)) {
+                alert("Zip code is invalid!");
+                return false;
+            }
+        });
+
+        // REAL TIME CHECKING
+        
+        // FIRSTNAME
         $('#firstname').on('input', function() {
-            var input = $(this);
-            var is_name = input.val();
-            if(is_name) {
+            var input = $(this).val();
+            if(name_text.test(input)) {
                 $(this.parentNode).removeClass("has-error");
             }
             else {
@@ -244,9 +290,8 @@
             }
         });
         $('#firstname').on('focusout', function() {
-            var input = $(this);
-            var is_name = input.val();
-            if(is_name) {
+            var input = $(this).val();
+            if(name_text.test(input)) {
                 $(this.parentNode).removeClass("has-error");
             }
             else {
@@ -254,11 +299,11 @@
             }
         });
 
-        // LASTNAME can't be blank
+        // LASTNAME
         $('#lastname').on('input', function() {
-            var input = $(this);
-            var is_name = input.val();
-            if(is_name) {
+            var input = $(this).val();
+            if(name_text.test(input)) {
+
                 $(this.parentNode).removeClass("has-error");
             }
             else {
@@ -266,9 +311,112 @@
             }
         });
         $('#lastname').on('focusout', function() {
-            var input = $(this);
-            var is_name = input.val();
-            if(is_name) {
+            var input = $(this).val();
+            if(name_text.test(input)) {
+                $(this.parentNode).removeClass("has-error");
+            }
+            else {
+                $(this.parentNode).addClass("has-error");
+            }
+        });
+
+        // EMAIL
+        $('#email').on('input', function() {
+            var input = $(this).val();
+            if(email_text.test(input)) {
+
+                $(this.parentNode).removeClass("has-error");
+            }
+            else {
+                $(this.parentNode).addClass("has-error");
+            }
+        });
+        $('#email').on('focusout', function() {
+            var input = $(this).val();
+            if(email_text.test(input)) {
+                $(this.parentNode).removeClass("has-error");
+            }
+            else {
+                $(this.parentNode).addClass("has-error");
+            }
+        });
+
+        // STREET
+        $('#street').on('input', function() {
+            var input = $(this).val();
+            if(street_text.test(input)) {
+
+                $(this.parentNode).removeClass("has-error");
+            }
+            else {
+                $(this.parentNode).addClass("has-error");
+            }
+        });
+        $('#street').on('focusout', function() {
+            var input = $(this).val();
+            if(street_text.test(input)) {
+                $(this.parentNode).removeClass("has-error");
+            }
+            else {
+                $(this.parentNode).addClass("has-error");
+            }
+        });
+
+        // CITY
+        $('#city').on('input', function() {
+            var input = $(this).val();
+            if(name_text.test(input)) {
+
+                $(this.parentNode).removeClass("has-error");
+            }
+            else {
+                $(this.parentNode).addClass("has-error");
+            }
+        });
+        $('#city').on('focusout', function() {
+            var input = $(this).val();
+            if(name_text.test(input)) {
+                $(this.parentNode).removeClass("has-error");
+            }
+            else {
+                $(this.parentNode).addClass("has-error");
+            }
+        });
+
+        // STATE
+        $('#state').on('input', function() {
+            var input = $(this).val();
+            if(input != "--") {
+                $(this.parentNode).removeClass("has-error");
+            }
+            else {
+                $(this.parentNode).addClass("has-error");
+            }
+        });
+        $('#state').on('focusout', function() {
+            var input = $(this).val();
+            if(input != "--") {
+                $(this.parentNode).removeClass("has-error");
+            }
+            else {
+                $(this.parentNode).addClass("has-error");
+            }
+        });
+
+        // ZIP
+        $('#zip').on('input', function() {
+            var input = $(this).val();
+            if(zip_text.test(input)) {
+
+                $(this.parentNode).removeClass("has-error");
+            }
+            else {
+                $(this.parentNode).addClass("has-error");
+            }
+        });
+        $('#zip').on('focusout', function() {
+            var input = $(this).val();
+            if(zip_text.test(input)) {
                 $(this.parentNode).removeClass("has-error");
             }
             else {
