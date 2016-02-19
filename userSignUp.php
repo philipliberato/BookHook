@@ -9,7 +9,7 @@
     // } else {
     // 	echo "connection successful";
     // 	}
-	mysql_connect("localhost:1234", "root", "");
+	mysql_connect("localhost", "root", "");
 	$database = "BookHook";
 	@mysql_select_db($database) or die( "Unable to select database");
 
@@ -31,6 +31,9 @@
 	mysql_query($query);
 
 	mysql_close();
+
+	$message = "Thanks for signing up!";
+	echo "<script type='text/javascript'>alert('$message'); window.location = 'index.html'; </script>";
 
 ?>
 
