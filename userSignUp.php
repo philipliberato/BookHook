@@ -1,6 +1,3 @@
-<html>
-<body>
-
 <?php
 
     // $connection = mysqli_connect("localhost:1234", "BookHook", "root", "");
@@ -32,10 +29,12 @@
 
 	mysql_close();
 
-	$message = "Thanks for signing up!";
-	echo "<script type='text/javascript'>alert('$message'); window.location = 'index.html'; </script>";
+	// $message = "Thanks for signing up!";
+	// echo "<script type='text/javascript'>
+	// 		window.alert('$message'); 
+	// 		window.location = 'index.html'; 
+	// 	</script>";
+
+	header('Location: index.html');
 
 ?>
-
-</body>
-</html>
