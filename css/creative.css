@@ -11,7 +11,8 @@ body {
 }
 
 body {
-    font-family: Merriweather,'Helvetica Neue',Arial,sans-serif;
+    /*font-family: Merriweather,'Helvetica Neue',Arial,sans-serif;*/
+    font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
 }
 
 hr {
@@ -49,6 +50,7 @@ p {
     margin-bottom: 20px;
     font-size: 16px;
     line-height: 1.5;
+    text-shadow: none;
 }
 
 .bg-primary {
@@ -149,7 +151,7 @@ aside {
         color: #fff;
     }
 
-    .navbar-default.affix {
+    /*.navbar-default.affix {
         border-color: rgba(34,34,34,.05);
         background-color: #fff;
     }
@@ -172,7 +174,7 @@ aside {
     .navbar-default.affix .nav > li>a:hover,
     .navbar-default.affix .nav>li>a:focus:hover {
         color: #5099d8;
-    }
+    }*/
 }
 
 header {
@@ -490,14 +492,17 @@ body {
 .text-darkblue {
     color: #28679c;
 }
+
 .icon-padding {
     margin-top: 90px;
 }
+
 .col-centered{
     float: none;
     margin: 0 auto;
     padding-bottom: 0px;
 }
+
 .form-group label {
     padding-bottom: 2px;
 }
@@ -525,9 +530,17 @@ body {
     padding-right: 5px;
     padding-left: 5px;
 }
+
 .navbar-default {
-    background-color: #000;
+    background-color: rgba(0,0,0,0.95);
 }
+
+.control-label {
+    font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
+    font-weight: 600;
+    color: #777;
+}
+
 
 
 

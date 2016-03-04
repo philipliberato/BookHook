@@ -88,9 +88,16 @@
             <div class="row">
                 <div class="col-md-8 col-sm-6 col-xs-6 col-centered">
 
-                    <form class="form-horizontal" action="userSignUp.php" method="post">
+                    <form class="form-horizontal" action="userSignUp.php" method="post" id="payment-form">
+                    	<span class="payment-errors"></span>
+                    	
                         <div class="form-group">
-                            <label class="col-md-2 control-label"></label>  
+
+                            <span class="col-md-2"><h3>&nbsp;</h3></span>
+                             
+
+                            <span><h3 class="text-lightblue">Personal Info</h3></span>
+                            <label class="col-md-2 control-label"></label> 
                             <div class="col-md-4">
                             <label class="control-label" for="firstname">First Name</label> 
                                 <input class="form-control" placeholder="First" id="firstname" name="firstname">
@@ -110,6 +117,19 @@
                         </div>
 
                         <div class="form-group">
+                            <label class="col-md-2 control-label"></label>
+                            <div class="col-md-8">
+                                <label class="control-label" for="password">Password</label>
+                                <input type="password" class="form-control" placeholder="Password" id="password" name="password">
+                            </div>
+                        </div>
+                        <br>
+                        <hr class="primary">
+                        <div class="form-group">
+
+                        <span class="col-md-2"><h3>&nbsp;</h3></span>
+
+                        <span><h3 class="text-lightblue">Billing Info</h3></span>
                             <label class="col-md-2 control-label"></label>
                             <div class="col-md-8">
                                 <label class="control-label" for="street">Address</label>
@@ -189,20 +209,51 @@
 
                         </div>
 
+                        <div class="form-group">
+                            
+                            <label class="col-md-2 control-label"></label>  
+                            <div class="col-md-3">
+                                <label class="control-label" for="card">Card Number</label> 
+                                <input class="form-control" type="text" size="20" data-stripe="number" placeholder="•••• •••• •••• ••••" id="card" name="card" />
+                            </div>
+
+                            <div class="col-md-1">
+                                <label class="control-label" for="cvc">CVC</label> 
+                                <input class="form-control" type="text" size="4" data-stripe="cvc" placeholder="•••" id="cvc" name="cvc" />
+                            </div>
+                            
+                            
+                            <div class="col-md-1">
+                            	<!-- Filler col -->
+                            </div>
+                                
+                            <div class="col-md-1">
+                            	<label class="control-label" for="expmm">Expiration</label> 
+                        		<input class="form-control" type="text" size="2" data-stripe="exp-month" placeholder="MM" id="expmm" name="expmm"/>
+                        	</div>
+
+                        	<div class="col-md-2">
+                        		<label class="control-label" for="expyyyy">&nbsp;&nbsp;&nbsp;&nbsp;Date</label> 
+								<input class="form-control" type="text" size="4" data-stripe="exp-year" placeholder="YYYY" id="expyyyy" name="expyyyy"/>
+							</div>
+
+                        </div>
+
                         <br>
                         <div class="form-group">
-                        <label class="col-md-5 control-label"></label>
-                        <button class="col-md-2 btn btn-lg btn-primary" id="btn_submit">Sign Up</button>
+                        	<label class="col-md-5 control-label"></label>
+                        	<button class="col-md-2 btn btn-lg btn-primary" id="btn_submit">Sign Up</button>
                         </div>
 
                     </form>
+                  
                 </div>
             </div>
         </div>
     </div>
 
-
-    <div class="navbar navbar-fixed-bottom">
+    <br><br><br><br>
+    <div class="navbar navbar-bottom">
             <div class="text-center">
                 <p class="text-sm text-faded">Copyright &copy; BookHook 2016</p>
             </div>
@@ -223,6 +274,14 @@
     <!-- Custom Theme JavaScript -->
     <script src="js/creative.js"></script>
 
+    <!-- Stripe Scripts -->
+    <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
+    <script type="text/javascript">
+	  // This identifies your website in the createToken call below
+	  Stripe.setPublishableKey('pk_test_oF9lNLtk8vwedvSBl2e41YA0');
+	  // ...
+	</script>
+
     <!-- Our Script -->
     <script>
     // FORM VALIDATION
@@ -236,12 +295,14 @@
         var email_text  = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,6}$/i;
         var street_text = /^[0-9a-zA-Z#\-\.\'\,\s]{1,100}$/;
         var zip_text    = /^[0-9]{1,5}$/;
+        var pw_text     = /^.{1,50}$/;
 
         // FORM SUBMISSION
         $("form").submit(function (e) {
             var firstname = document.getElementById("firstname").value;
             var lastname  = document.getElementById("lastname").value;
             var email     = document.getElementById("email").value;
+            var pw        = document.getElementById("password").value;
             var street    = document.getElementById("street").value;
             var city      = document.getElementById("city").value;
             var state     = document.getElementById("state").value;
@@ -257,6 +318,10 @@
             }
             else if (!email_text.test(email)) {
                 alert("Email is invalid!");
+                return false;
+            }
+            else if (!pw_text.test(pw)) {
+                alert("Password is invalid!");
                 return false;
             }
             else if (!street_text.test(street)) {
@@ -275,7 +340,37 @@
                 alert("Zip code is invalid!");
                 return false;
             }
+            else {
+            	var $form = $(this);
+
+			    // Disable the submit button to prevent repeated clicks
+			    $form.find('button').prop('disabled', true);
+
+			    Stripe.card.createToken($form, stripeResponseHandler);
+
+			    // Prevent the form from submitting with the default action
+			    return false;
+            }
         });
+
+        // STRIPE JUNK
+        function stripeResponseHandler(status, response) {
+		  var $form = $('#payment-form');
+
+		  if (response.error) {
+		    // Display alert with the error message
+		    alert(response.error.message);
+		    $form.find('button').prop('disabled', false);
+		  } else {
+		    // response contains id and card, which contains additional card details
+		    var token = response.id;
+		    // Insert the token into the form so it gets submitted to the server
+		    $form.append($('<input type="hidden" name="stripeToken" />').val(token));
+		    // and submit
+		    $form.get(0).submit();
+		  }
+		};
+
 
         // REAL TIME CHECKING
 
@@ -334,6 +429,26 @@
         $('#email').on('focusout', function() {
             var input = $(this).val();
             if(email_text.test(input)) {
+                $(this.parentNode).removeClass("has-error");
+            }
+            else {
+                $(this.parentNode).addClass("has-error");
+            }
+        });
+
+        // PASSWORD
+        $('#password').on('input', function() {
+            var input = $(this).val();
+            if(pw_text.test(input)) {
+                $(this.parentNode).removeClass("has-error");
+            }
+            else {
+                $(this.parentNode).addClass("has-error");
+            }
+        });
+        $('#password').on('focusout', function() {
+            var input = $(this).val();
+            if(pw_text.test(input)) {
                 $(this.parentNode).removeClass("has-error");
             }
             else {
