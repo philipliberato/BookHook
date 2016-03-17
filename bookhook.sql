@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Mar 04, 2016 at 07:08 AM
+-- Generation Time: Mar 17, 2016 at 04:37 PM
 -- Server version: 10.1.9-MariaDB
 -- PHP Version: 5.6.15
 
@@ -17,7 +17,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `bookhook`
+-- Database: `BookHook`
 --
 
 -- --------------------------------------------------------
@@ -35,8 +35,17 @@ CREATE TABLE `siteusers` (
   `State` varchar(50) NOT NULL,
   `Zipcode` char(5) NOT NULL,
   `Email` varchar(50) NOT NULL,
-  `stripeID` varchar(50) NOT NULL
+  `stripeID` varchar(50) NOT NULL,
+  `Password` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `siteusers`
+--
+
+INSERT INTO `siteusers` (`userID`, `First`, `Last`, `StreetAddress`, `City`, `State`, `Zipcode`, `Email`, `stripeID`, `Password`) VALUES
+(29, 'Happy', 'Happers', 'happy place', 'cville', 'VA', '22903', 'philipliberato@gmail.com', 'cus_86F61lmzKZTs54', 'happy'),
+(30, 'sad', 'sadders', 'sad land', 'cville', 'VA', '22903', 'sad@gmail.com', 'cus_86FFiglpiTURTJ', 'sadddd');
 
 --
 -- Indexes for dumped tables
@@ -56,7 +65,7 @@ ALTER TABLE `siteusers`
 -- AUTO_INCREMENT for table `siteusers`
 --
 ALTER TABLE `siteusers`
-  MODIFY `userID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+  MODIFY `userID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
