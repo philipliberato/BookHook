@@ -57,9 +57,10 @@
 	$state     = $_POST["state"];
 	$zip	   = $_POST["zip"];
 	$email     = $_POST["email"];
+	$password  = $_POST["password"];
 
 	// Insert Query
-	$query = "INSERT INTO siteusers VALUES ('','$firstname', '$lastname', '$street', '$city', '$state', '$zip', '$email', '$stripeID')";
+	$query = "INSERT INTO siteusers VALUES ('','$firstname', '$lastname', '$street', '$city', '$state', '$zip', '$email', '$stripeID', '$password')";
 	
 	// Run Query
 	$result = mysql_query($query);
