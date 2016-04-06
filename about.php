@@ -48,23 +48,23 @@
                     <span class="icon-bar"></span>
                 </button>
 
-                <a class="navbar-brand page-scroll" href="index.html"><span class="icon"><img src="img/BookHookLogo-xs.png"style="padding-bottom:3px; padding-right:8px;"></span>BookHook</a>
+                <a class="navbar-brand page-scroll" href="index.php"><span class="icon"><img src="img/BookHookLogo-xs.png"style="padding-bottom:3px; padding-right:8px;"></span>BookHook</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a class="page-scroll" href="index.html">Home</a>
+                        <a class="page-scroll" href="index.php">Home</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#page-top">About</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="signup.html">Sign Up</a>
+                        <a class="page-scroll" href="signup.php">Sign Up</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="signin.html">Sign In</a>
+                        <a class="page-scroll" href="signin.php">Sign In</a>
                     </li>
                 </ul>
             </div>
@@ -148,7 +148,7 @@
             </div>
             <br>
               <div class="col-lg-6 col-md-6 col-centered text-center">
-                  <a href="signup.html" class="btn btn-primary btn-xl">Sign Up Now</a>
+                  <a href="signup.php" class="btn btn-primary btn-xl">Sign Up Now</a>
               </div>
             </div>
         </div>

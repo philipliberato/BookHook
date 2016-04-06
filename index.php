@@ -58,13 +58,13 @@
                         <a class="page-scroll" href="#page-top">Home</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="about.html">About</a>
+                        <a class="page-scroll" href="about.php">About</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="signup.html">Sign Up</a>
+                        <a class="page-scroll" href="signup.php">Sign Up</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="signin.html">Sign In</a>
+                        <a class="page-scroll" href="signin.php">Sign In</a>
                     </li>
                 </ul>
             </div>
@@ -82,7 +82,7 @@
                 <h1>Borrow books</h1>
                 <br>
                 <p>By Students &nbsp;&nbsp;&nbsp; For Students</p>
-                <a href="about.html" class="btn btn-primary btn-xl page-scroll">Find Out More</a>
+                <a href="about.php" class="btn btn-primary btn-xl page-scroll">Find Out More</a>
             </div>
         </div>
     </header>

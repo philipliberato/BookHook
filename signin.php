@@ -48,23 +48,23 @@
                     <span class="icon-bar"></span>
                 </button>
 
-                <a class="navbar-brand page-scroll" href="index.html"><span class="icon"><img src="img/BookHookLogo-xs.png" style="padding-bottom:3px; padding-right:8px;" alt="logo"></span>BookHook</a>
+                <a class="navbar-brand page-scroll" href="index.php"><span class="icon"><img src="img/BookHookLogo-xs.png" style="padding-bottom:3px; padding-right:8px;" alt="logo"></span>BookHook</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a class="page-scroll" href="index.html">Home</a>
+                        <a class="page-scroll" href="index.php">Home</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="about.html">About</a>
+                        <a class="page-scroll" href="about.php">About</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#page-top">Sign Up</a>
+                        <a class="page-scroll" href="signup.php">Sign Up</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="signin.html">Sign In</a>
+                        <a class="page-scroll" href="#page-top">Sign In</a>
                     </li>
                 </ul>
             </div>
@@ -81,7 +81,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Join BookHook</h2>
+                    <h2 class="section-heading">Sign In</h2>
                     <hr class="primary">
                     <br>    
                 </div>
@@ -99,16 +99,7 @@
                             <span class="col-md-2"><h3>&nbsp;</h3></span>
                              
 
-                            <span><h3 class="text-lightblue">Personal Info</h3></span>
-                            <label class="col-md-2 control-label"></label> 
-                            <div class="col-md-4">
-                            <label class="control-label" for="firstname">First Name</label> 
-                                <input class="form-control" placeholder="First" id="firstname" name="firstname">
-                            </div>
-                            <div class="col-md-4">
-                            <label class="control-label" for="lastname">Last Name</label> 
-                                <input class="form-control"placeholder="Last" id="lastname" name="lastname">
-                            </div>
+                            <span><h3 class="text-lightblue">Account Info</h3></span>
                         </div>
 
                         <div class="form-group">
@@ -127,128 +118,13 @@
                             </div>
                         </div>
                         <br>
+                        <p>Forgot Password?</p>
                         <hr class="primary">
-                        <div class="form-group">
-
-                        <span class="col-md-2"><h3>&nbsp;</h3></span>
-
-                        <span><h3 class="text-lightblue">Billing Info</h3></span>
-                            <label class="col-md-2 control-label"></label>
-                            <div class="col-md-8">
-                                <label class="control-label" for="street">Address</label>
-                                <input class="form-control" placeholder="Street" id="street" name="street">
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label class="col-md-2 control-label"></label>  
-                            <div class="col-md-3">
-                                <label class="control-label" for="city">City</label> 
-                                <input class="form-control" placeholder="City" id="city" name="city">
-                            </div>
-                            
-                            <div class="col-md-2">
-                                <label class="control-label" for="state">State</label> 
-                                <select id="state" name="state" class="form-control">
-                                    <option value="--">--</option>
-                                    <option value="AL">AL</option>
-                                    <option value="AK">AK</option>
-                                    <option value="AZ">AZ</option>
-                                    <option value="AR">AR</option>
-                                    <option value="CA">CA</option>
-                                    <option value="CO">CO</option>
-                                    <option value="CT">CT</option>
-                                    <option value="DE">DE</option>
-                                    <option value="DC">DC</option>
-                                    <option value="FL">FL</option>
-                                    <option value="GA">GA</option>
-                                    <option value="HI">HI</option>
-                                    <option value="ID">ID</option>
-                                    <option value="IL">IL</option>
-                                    <option value="IN">IN</option>
-                                    <option value="IA">IA</option>
-                                    <option value="KS">KS</option>
-                                    <option value="KY">KY</option>
-                                    <option value="LA">LA</option>
-                                    <option value="ME">ME</option>
-                                    <option value="MD">MD</option>
-                                    <option value="MA">MA</option>
-                                    <option value="MI">MI</option>
-                                    <option value="MN">MN</option>
-                                    <option value="MS">MS</option>
-                                    <option value="MO">MO</option>
-                                    <option value="MT">MT</option>
-                                    <option value="NE">NE</option>
-                                    <option value="NV">NV</option>
-                                    <option value="NH">NH</option>
-                                    <option value="NJ">NJ</option>
-                                    <option value="NM">NM</option>
-                                    <option value="NY">NY</option>
-                                    <option value="NC">NC</option>
-                                    <option value="ND">ND</option>
-                                    <option value="OH">OH</option>
-                                    <option value="OK">OK</option>
-                                    <option value="OR">OR</option>
-                                    <option value="PA">PA</option>
-                                    <option value="RI">RI</option>
-                                    <option value="SC">SC</option>
-                                    <option value="SD">SD</option>
-                                    <option value="TN">TN</option>
-                                    <option value="TX">TX</option>
-                                    <option value="UT">UT</option>
-                                    <option value="VT">VT</option>
-                                    <option value="VA">VA</option>
-                                    <option value="WA">WA</option>
-                                    <option value="WV">WV</option>
-                                    <option value="WI">WI</option>
-                                    <option value="WY">WY</option>
-                                </select>
-                            </div>
-
-                            <div class="col-md-3">
-                                <label class="control-label" for="zip">Zip</label> 
-                                <input class="form-control"placeholder="Zipcode" id="zip" name="zip">
-                            </div>
-
-                        </div>
-
-                        <div class="form-group">
-                            
-                            <label class="col-md-2 control-label"></label>  
-                            <div class="col-md-3">
-                                <label class="control-label" for="card">Card Number</label> 
-                                <input class="form-control" type="text" size="20" data-stripe="number" placeholder="•••• •••• •••• ••••" id="card" name="card" />
-                            </div>
-
-                            <div class="col-md-1">
-                                <label class="control-label" for="cvc">CVC</label> 
-                                <input class="form-control" type="text" size="4" data-stripe="cvc" placeholder="•••" id="cvc" name="cvc" />
-                            </div>
-                            
-                            
-                            <div class="col-md-1">
-                            	<!-- Filler col -->
-                            </div>
-                                
-                            <div class="col-md-1">
-                            	<label class="control-label" for="expmm">Expiration</label> 
-                        		<input class="form-control" type="text" size="2" data-stripe="exp-month" placeholder="MM" id="expmm" name="expmm"/>
-                        	</div>
-
-                        	<div class="col-md-2">
-                        		<label class="control-label" for="expyyyy">&nbsp;&nbsp;&nbsp;&nbsp;Date</label> 
-								<input class="form-control" type="text" size="4" data-stripe="exp-year" placeholder="YYYY" id="expyyyy" name="expyyyy"/>
-							</div>
-
-                        </div>
 
                         <br>
                         <div class="form-group">
-                            <div class="text-center text-muted">By signing up, you agree to pay a $10 charge.</div>
-                        </div>
-                        <div class="form-group">
                         	<label class="col-md-5 control-label"></label>
-                        	<button class="col-md-2 btn btn-lg btn-primary" id="btn_submit">Sign Up</button>
+                        	<button class="col-md-2 btn btn-lg btn-primary" id="btn_submit">Sign In</button>
                         </div>
 
                     </form>
