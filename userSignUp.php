@@ -73,6 +73,23 @@
 	mysql_close();
 
 /* ------------------------------------------------
+ * START SESSION
+ * ------------------------------------------------
+ */
+
+	session_start();	// start the session
+	// set the session variables
+	$_SESSION['firstname'] = $firstname
+	$_SESSION['lastname'] = $lastname
+	$_SESSION['street'] = $street
+	$_SESSION['city'] = $city
+	$_SESSION['state'] = $state
+	$_SESSION['zip'] = $zip
+	$_SESSION['email'] = $email
+	$_SESSION['password'] = $password
+	$_SESSION['stripeID'] = $stripeID
+
+/* ------------------------------------------------
  * EMAIL USER 
  * ------------------------------------------------
  */
