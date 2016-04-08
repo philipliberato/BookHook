@@ -23,7 +23,7 @@
 			<?php
 			// start a session for the logged in user
 			session_start();
-				// set the session variables
+			// set the session variables
 			$_SESSION['firstname'] = $user_info['First'];
 			$_SESSION['lastname'] = $user_info['Last'];
 			$_SESSION['street'] = $user_info['StreetAddress'];
