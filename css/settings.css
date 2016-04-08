@@ -1,0 +1,12 @@
+.dl-horizontal dt{
+    font-size: 22px;
+}
+
+.dl-horizontal dd{
+	text-align: left;
+    margin-bottom: 1em;
+    font-size: 20px;
+}
+
+
+.center-block {float: none !important}

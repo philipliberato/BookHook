@@ -21,6 +21,8 @@
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
 
+    <link rel="stylesheet" href="css/settings.css" type="text/css">
+
     <!-- Custom Fonts -->
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
@@ -65,7 +67,7 @@
                         <a class="page-scroll" href="#">Manage My Books</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#">Settings</a>
+                        <a class="page-scroll" href="#page-top">Settings</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="signout.php">Sign Out</a>
@@ -77,6 +79,7 @@
         <!-- /.container-fluid -->
     </nav>
 
+    <header>
     <div id="services" class="bg-dark">
         <div class="container">
             <div class="row">
@@ -86,20 +89,28 @@
                 </div>
             </div>
         </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-8 col-sm-6 col-xs-6 col-centered">
+        <div class="container text-center centered">
+            <div class="row text-center centered">
+                <div class="col-centered">
+                    <h1 class="text-lightblue">Profile Information</h1>
+                   <dl class="dl-horizontal col-md-5 col-md-offset-4">
+                      <dt>Name</dt> <dd><?php echo $_SESSION['firstname']; ?> <?php echo $_SESSION['lastname']; ?></dd>
+                      <dt>Address</dt> <dd><?php echo $_SESSION['street']; ?> <?php echo $_SESSION['city']; ?>, <?php echo $_SESSION['state']; ?> <?php echo $_SESSION['zip']; ?></dd>
+                      <dt>Email</dt> <dd><?php echo $_SESSION['email']; ?></dd>
+                      <dt>Password</dt> <dd><?php echo $_SESSION['password']; ?></dd>
+                      <!-- <dt>Stripe ID</dt> <dd><?php echo $_SESSION['stripeID']; ?></dd>  -->              
+                    </dl>
+                    <div class="col-md-7"></div>
+                    <div class="col-md-5"></div>
 
-                   Hey
-                  
+
                 </div>
+
             </div>
+                            <button class="btn btn-lg btn-primary text-center">Update Information</button>  
         </div>
     </div>
 
-
-
-    <header>
         <img class="icon-padding" color= "black" height="100">
         <div class="header-content">
                        
