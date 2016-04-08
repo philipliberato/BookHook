@@ -89,7 +89,7 @@
         </div>
         <div class="container">
             <div class="row">
-                <div class="col-md-6 col-sm-6 col-xs-6 col-centered">
+                <div class="col-md-6 col-sm-6 col-xs-6 col-left">
 
                     <form class="form-horizontal" action="listbook.php" method="post" id="listbookform">
                                                 
@@ -174,8 +174,9 @@
                             <button class="col-md-2 btn btn-lg btn-primary" id="btn_submit">List It</button>
                         </div>
 
-                    </form>
-
+                    </form>                  
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-6 col-right">
 
                     <form class="form-horizontal" action="searchbook.php" method="post" id="searchbookform">
                                                 
@@ -263,6 +264,55 @@
                     </form>
                   
                 </div>
+
+                 <div class="col-md-12 col-sm-12 col-xs-12 col-centered">
+                   
+                    <table style="width:100%; padding-top: 100px">
+                        <tr>
+                            <td>
+                                <p>Popular Books in Your Area:</p>
+                                <a href="#">See More Here!</a>
+                            </td>
+                            <td>
+                                <img src="img/algo.jpg"alt:"Algorithms">
+                                <p>$13.58</p>
+                            </td>
+                            <td>
+                                <img src="img/write.jpg" alt:"College Writing">
+                                <p>$9.89</p>
+                            </td> 
+                            <td>
+                                <img src="img/westciv.jpg" alt:"Western Civilization">
+                                <p>$12.45</p>
+                            </td>
+                            <td>
+                                <img src="img/calc.jpg" alt:"Western Civilization">
+                                <p>$15.31</p>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <p>Your Listed Books:</p>
+                                <a href="#">See All</a>
+                            </td>
+                            <td>
+                                <img src="img/c++.jpg" alt:"C++ and Object-oriented Programming">
+                                <p>List: $15.00</p>
+                                <a href="#">1 New Offer</a>
+                            </td>
+                            <td>
+                                <img src="img/security.jpg" alt: "Computer Security">
+                                <p>List: $20.00</p>
+                                <a href="#">3 New Offers</a>
+                            </td>
+
+
+
+                        </tr>
+
+                    </table> 
+                </div>    
             </div>
         </div>
     </div>
