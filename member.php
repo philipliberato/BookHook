@@ -65,7 +65,7 @@
                         <a class="page-scroll" href="#">Manage My Books</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#">Settings</a>
+                        <a class="page-scroll" href="settings.php">Settings</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="signout.php">Sign Out</a>
@@ -83,12 +83,13 @@
                 <div class="col-lg-12 text-center">
                     <hr class="primary">
                     <br>    
+                    <?php echo '<h2>Welcome, ' . $_SESSION["firstname"] . '!</h2>'; ?>
                 </div>
             </div>
         </div>
         <div class="container">
             <div class="row">
-                <div class="col-md-8 col-sm-6 col-xs-6 col-centered">
+                <div class="col-md-6 col-sm-6 col-xs-6 col-centered">
 
                     <form class="form-horizontal" action="listbook.php" method="post" id="listbookform">
                                                 
@@ -170,7 +171,7 @@
                         
                         <div class="form-group">
                             <label class="col-md-5 control-label"></label>
-                            <button class="col-md-2 btn btn-lg btn-primary" id="btn_submit">List It!</button>
+                            <button class="col-md-2 btn btn-lg btn-primary" id="btn_submit">List It</button>
                         </div>
 
                     </form>
