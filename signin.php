@@ -91,7 +91,7 @@
             <div class="row">
                 <div class="col-md-8 col-sm-6 col-xs-6 col-centered">
 
-                    <form class="form-horizontal" action="userSignUp.php" method="post" id="payment-form">
+                    <form class="form-horizontal" action="sign_in_handler.php" method="post" id="payment-form">
                     	<span class="payment-errors"></span>
                     	
                         <div class="form-group">
