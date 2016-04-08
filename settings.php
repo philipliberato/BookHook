@@ -1,7 +1,7 @@
 <?php
     session_start();
-    if(isset($_SESSION['firstname']) && !empty($_SESSION['firstname'])) {
-        header('Location: member.php');
+    if(!isset($_SESSION['firstname'])) {
+        header('Location: index.php');
     }
 ?>
 
@@ -55,23 +55,20 @@
                     <span class="icon-bar"></span>
                 </button>
 
-                <a class="navbar-brand page-scroll" href="#page-top"><span class="icon"><img src="img/BookHookLogo-xs.png"style="padding-bottom:3px; padding-right:8px;"></span>BookHook</a>
+                <a class="navbar-brand page-scroll" href="member.php"><span class="icon"><img src="img/BookHookLogo-xs.png"style="padding-bottom:3px; padding-right:8px;"></span>BookHook</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a class="page-scroll" href="#page-top">Home</a>
+                        <a class="page-scroll" href="#">Manage My Books</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="about.php">About</a>
+                        <a class="page-scroll" href="#">Settings</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="signup.php">Sign Up</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="signin.php">Sign In</a>
+                        <a class="page-scroll" href="signout.php">Sign Out</a>
                     </li>
                 </ul>
             </div>
@@ -80,17 +77,32 @@
         <!-- /.container-fluid -->
     </nav>
 
-    <header>
-        <img class="icon-padding" src="img/BookHookLogo.png" height="100">
-        <div class="header-content">
-            <div class="header-content-inner">
-                <h1>Lend books</h1>
-                <hr>
-                <h1>Borrow books</h1>
-                <br>
-                <p>By Students &nbsp;&nbsp;&nbsp; For Students</p>
-                <a href="about.php" class="btn btn-primary btn-xl page-scroll">Find Out More</a>
+    <div id="services" class="bg-dark">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <hr class="primary">
+                    <br>    
+                </div>
             </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-sm-6 col-xs-6 col-centered">
+
+                   Hey
+                  
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <header>
+        <img class="icon-padding" color= "black" height="100">
+        <div class="header-content">
+                       
         </div>
     </header>
 

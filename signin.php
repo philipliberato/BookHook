@@ -125,7 +125,7 @@
                             </div>
                         </div>
                         <br>
-                        <p>Forgot Password?</p>
+                        <!-- <p>Forgot Password?</p> -->
                         <hr class="primary">
 
                         <br>
