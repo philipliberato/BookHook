@@ -274,19 +274,19 @@
                                 <a href="#">See More Here!</a>
                             </td>
                             <td>
-                                <img src="img/algo.jpg"alt:"Algorithms">
+                                <a href="#"><img src="img/algo.jpg"alt:"Algorithms"></a>
                                 <p>$13.58</p>
                             </td>
                             <td>
-                                <img src="img/write.jpg" alt:"College Writing">
+                                <a href="#"><img src="img/write.jpg" alt:"College Writing"></a>
                                 <p>$9.89</p>
                             </td> 
                             <td>
-                                <img src="img/westciv.jpg" alt:"Western Civilization">
+                                <a href="#"><img src="img/westciv.jpg" alt:"Western Civilization"></a>
                                 <p>$12.45</p>
                             </td>
                             <td>
-                                <img src="img/calc.jpg" alt:"Western Civilization">
+                                <a href="#"><img src="img/calc.jpg" alt:"Western Civilization"></a>
                                 <p>$15.31</p>
                             </td>
                         </tr>
@@ -306,9 +306,6 @@
                                 <p>List: $20.00</p>
                                 <a href="#">3 New Offers</a>
                             </td>
-
-
-
                         </tr>
 
                     </table> 
