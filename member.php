@@ -264,10 +264,13 @@
                     </form>
                   
                 </div>
+            </div>
 
-                 <div class="col-md-12 col-sm-12 col-xs-12 col-centered">
+            <br><br>
+            <div class="row">
+                 <div class="col-md-12 col-sm-12 col-xs-12 col-centered" style="margin-left: 80px">
                    
-                    <table style="width:100%; padding-top: 100px">
+                    <table style="width:100%; padding: 100px;">
                         <tr>
                             <td>
                                 <p>Popular Books in Your Area:</p>
@@ -312,16 +315,10 @@
                 </div>    
             </div>
         </div>
+        <br><br><br>
     </div>
 
 
-
-    <header>
-        <img class="icon-padding" color= "black" height="100">
-        <div class="header-content">
-                       
-        </div>
-    </header>
 
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
